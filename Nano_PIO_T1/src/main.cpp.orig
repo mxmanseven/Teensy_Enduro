@@ -1,0 +1,28 @@
+#include <Arduino.h>
+
+void setup() {
+    // put your setup code here, to run once:
+
+    Serial.begin(9600);
+}
+
+int i = 0;
+
+void loop() {
+
+  i++;
+
+  Serial.print(String(i) + "\r");
+
+  // turn the LED on (HIGH is the voltage level)
+  digitalWrite(LED_BUILTIN, HIGH);
+
+  // wait for a second
+  delay(1000);
+
+  // turn the LED off by making the voltage LOW
+  digitalWrite(LED_BUILTIN, LOW);
+
+   // wait for a second
+  delay(1000);
+}
